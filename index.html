@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Software | Encanto — Gestión Integral de Club Deportivo</title>
+  <meta name="description" content="Propuesta de desarrollo de software a medida para la gestión integral del Club Encanto.">
+  <link rel="stylesheet" href="styles.css?v=1.2">
+  <link rel="icon" href="logo.png">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ══════════ COLOR BAR ══════════ -->
+<div class="color-bar"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" id="nav">
+  <ul class="nav-links">
+    <li><a href="#modulos">Módulos</a></li>
+    <li><a href="#tecnologia">Tecnología</a></li>
+    <li><a href="#timeline">Cronograma</a></li>
+    <!-- <li><a href="#inversion">Inversión</a></li> -->
+    <li><a href="#beneficios">Beneficios</a></li>
+  </ul>
+  <div class="nav-actions" style="display:flex; gap:1rem; align-items:center;">
+    <!-- <a href="#inversion" class="nav-cta">Ver Inversión</a> -->
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+  </div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-content">
+    <img src="logo.png" alt="Encanto Logo" class="hero-logo animate-up">
+    <div class="hero-badge animate-up">
+      <i data-lucide="sparkles"></i> <span>La Transformación Digital de Encanto comienza aquí.</span>
+    </div>
+    <h1 class="hero-title animate-up delay-1">
+      Una plataforma inteligente, unificada y diseñada a la medida de sus necesidades.
+    </h1>
+    <p class="animate-up delay-2">
+      Hemos desarrollado la propuesta de un sistema integral pensado exclusivamente para optimizar cada rincón de <strong>Encanto Campestre - Centro Recreacional</strong>. Desde la reserva de canchas y el acceso a la piscina, hasta la gestión del restaurante y la fidelización de clientes. Todo integrado directamente con WhatsApp para que su operación fluya en una sola plataforma inteligente.
+    </p>
+    <div class="hero-buttons animate-up delay-3">
+      <a href="#modulos" class="btn-primary">Revisar Propuesta</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MÓDULOS ══════════ -->
+<section class="section-full section-purple-soft" id="modulos">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="package" style="width:14px;height:14px;"></i> <span class="text-gradient">El motor para la evolución de Encanto Campestre</span></div>
+    <h2 class="section-title">Todo lo que su club necesita,<br>en un solo lugar</h2>
+    <p class="section-subtitle">Proyectamos una plataforma modular exclusiva para su club. Cada área se conectará en una sola red inteligente para optimizar tiempos, reducir errores y centralizar su administración.</p>
+  </div>
+
+  <div class="modules-grid">
+    <div class="module-card animate-up">
+      <div class="module-card-header">
+        <div class="module-icon purple"><i data-lucide="calendar"></i></div>
+        <h3>Planificador de Canchas</h3>
+      </div>
+      <p>Calendario visual en tiempo real para gestionar reservas de todas las canchas. Control de horarios, estados de pago y disponibilidad al instante.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-purple">Calendario visual</span>
+        <span class="module-tag tag-glass tag-purple">Reservas en tiempo real</span>
+        <span class="module-tag tag-glass tag-purple">Estados de pago</span>
+        <span class="module-tag tag-glass tag-purple">Multi-cancha</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-1">
+      <div class="module-card-header">
+        <div class="module-icon teal"><i data-lucide="waves"></i></div>
+        <h3>Venta de Manillas — Piscina</h3>
+      </div>
+      <p>Sistema de venta de manillas para control de acceso a piscina. Registro de ventas, tipos de manilla y control de capacidad en tiempo real.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-teal">Control de acceso</span>
+        <span class="module-tag tag-glass tag-teal">Tipos de manilla</span>
+        <span class="module-tag tag-glass tag-teal">Reportes de venta</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-2">
+      <div class="module-card-header">
+        <div class="module-icon red"><i data-lucide="utensils"></i></div>
+        <h3>Control de Restaurante</h3>
+      </div>
+      <p>Gestión de mesas, pedidos y cuentas del restaurante del club. Integración con cocina y reportes de ventas diarios.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-red">Gestión de mesas</span>
+        <span class="module-tag tag-glass tag-red">Pedidos en vivo</span>
+        <span class="module-tag tag-glass tag-red">Cierre de caja</span>
+        <span class="module-tag tag-glass tag-red">Menú digital</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-3">
+      <div class="module-card-header">
+        <div class="module-icon orange"><i data-lucide="message-square"></i></div>
+        <h3>Consola de WhatsApp</h3>
+      </div>
+      <p>Centro de comunicaciones integrado con WhatsApp Business API. Envíe confirmaciones, recordatorios y promociones automáticas a sus clientes.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-orange">Mensajes automáticos</span>
+        <span class="module-tag tag-glass tag-orange">Recordatorios</span>
+        <span class="module-tag tag-glass tag-orange">Plantillas</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-4">
+      <div class="module-card-header">
+        <div class="module-icon purple"><i data-lucide="users"></i></div>
+        <h3>Directorio de Clientes</h3>
+      </div>
+      <p>Base de datos completa de todos sus clientes y miembros. Historial de reservas, preferencias y comunicaciones en un solo lugar.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-purple">Perfiles completos</span>
+        <span class="module-tag tag-glass tag-purple">Historial</span>
+        <span class="module-tag tag-glass tag-purple">Segmentación</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-5">
+      <div class="module-card-header">
+        <div class="module-icon teal"><i data-lucide="bar-chart-3"></i></div>
+        <h3>Dashboard Operativo</h3>
+      </div>
+      <p>Panel de control con métricas en tiempo real: ocupación de canchas, ingresos del día, reservas pendientes y alertas del sistema.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-teal">Métricas en vivo</span>
+        <span class="module-tag tag-glass tag-teal">Gráficas</span>
+        <span class="module-tag tag-glass tag-teal">Alertas</span>
+        <span class="module-tag tag-glass tag-teal">KPIs</span>
+      </div>
+    </div>
+
+    <div class="module-card animate-up delay-6">
+      <div class="module-card-header">
+        <div class="module-icon red"><i data-lucide="hammer"></i></div>
+        <h3>Gestión de Infraestructura</h3>
+      </div>
+      <p>Control del mantenimiento de canchas, piscina y áreas comunes. Programación de tareas, historial y alertas preventivas.</p>
+      <div class="module-features">
+        <span class="module-tag tag-glass tag-red">Mantenimiento</span>
+        <span class="module-tag tag-glass tag-red">Programación</span>
+        <span class="module-tag tag-glass tag-red">Historial</span>
+        <span class="module-tag tag-glass tag-red">Alertas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PREVIEW APP ══════════ -->
+<section class="section-full section-white" id="preview">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="log-in" style="width:14px;height:14px;"></i> <span class="text-gradient">Acceso Seguro</span></div>
+    <h2 class="section-title">Control de acceso<br>centralizado</h2>
+    <p class="section-subtitle">Una puerta de entrada profesional y segura para cada miembro de su equipo, con roles y permisos definidos.</p>
+  </div>
+
+  <div class="preview-frame animate-up">
+    <div class="preview-topbar">
+      <div class="preview-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-teal"></span>
+      </div>
+      <span class="preview-title">Encanto — Inicio de Sesión</span>
+    </div>
+    <img src="ventana_1.png" alt="Vista del módulo de Login" class="preview-img">
+  </div>
+</section>
+
+<!-- ══════════ PREVIEW APP 2 ══════════ -->
+<section class="section-full section-white" id="preview-2" style="padding-top: 0;">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="calendar" style="width:14px;height:14px;"></i> <span class="text-gradient">Planificador de Canchas</span></div>
+    <h2 class="section-title">Control total de su<br>disponibilidad diaria</h2>
+    <p class="section-subtitle">Visualice y gestione la ocupación de sus canchas profesionales de forma clara, con estados de pago y mantenimiento en tiempo real.</p>
+  </div>
+
+  <div class="preview-frame animate-up">
+    <div class="preview-topbar">
+      <div class="preview-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-teal"></span>
+      </div>
+      <span class="preview-title">Encanto — Planificador de Canchas</span>
+    </div>
+    <img src="ventana_2.png" alt="Vista del módulo de Calendario de Canchas" class="preview-img">
+  </div>
+</section>
+
+<!-- ══════════ PREVIEW APP 3 ══════════ -->
+<section class="section-full section-white" id="preview-3" style="padding-top: 0;">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="waves" style="width:14px;height:14px;"></i> <span class="text-gradient">Venta de Manillas</span></div>
+    <h2 class="section-title">Gestión eficiente de<br>acceso a piscina</h2>
+    <p class="section-subtitle">Registro rápido de ventas, control de categorías (Niños, Adultos, Convenios) y monitoreo de ingresos diarios.</p>
+  </div>
+
+  <div class="preview-frame animate-up">
+    <div class="preview-topbar">
+      <div class="preview-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-teal"></span>
+      </div>
+      <span class="preview-title">Encanto — Venta de Manillas (Piscina)</span>
+    </div>
+    <img src="ventana_3.png" alt="Vista del módulo de Venta de Manillas" class="preview-img">
+  </div>
+</section>
+
+<!-- ══════════ PREVIEW APP 4 ══════════ -->
+<section class="section-full section-white" id="preview-4" style="padding-top: 0;">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="utensils" style="width:14px;height:14px;"></i> <span class="text-gradient">Control de Restaurante</span></div>
+    <h2 class="section-title">Gestión ágil para su<br>punto de venta</h2>
+    <p class="section-subtitle">Optimice la toma de pedidos, controle su inventario en tiempo real y facture en segundos con una interfaz intuitiva.</p>
+  </div>
+
+  <div class="preview-frame animate-up">
+    <div class="preview-topbar">
+      <div class="preview-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-teal"></span>
+      </div>
+      <span class="preview-title">Encanto — Punto de Venta (Restaurante)</span>
+    </div>
+    <img src="Ventana_4.png" alt="Vista del módulo de Restaurante POS" class="preview-img">
+  </div>
+</section>
+
+<!-- ══════════ TECNOLOGÍA ══════════ -->
+<section class="section-full section-teal-soft" id="tecnologia">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="zap" style="width:14px;height:14px;"></i> <span class="text-gradient">Respaldo Tecnológico</span></div>
+    <h2 class="section-title">La tecnología que garantiza<br>el éxito de su operación</h2>
+    <p class="section-subtitle">Utilizamos las herramientas más modernas y robustas para asegurar la estabilidad, velocidad y seguridad de su sistema.</p>
+  </div>
+
+  <div class="tech-grid">
+    <div class="tech-card animate-up">
+      <div class="icon"><i data-lucide="message-circle" style="color:#25D366;"></i></div>
+      <h4>WhatsApp API</h4>
+      <p>Comunicación directa y automatizada</p>
+    </div>
+    <div class="tech-card animate-up delay-1">
+      <div class="icon"><i data-lucide="brain" style="color:#10a37f;"></i></div>
+      <h4>ChatGPT (AI)</h4>
+      <p>Inteligencia Artificial avanzada</p>
+    </div>
+    <div class="tech-card animate-up delay-2">
+      <div class="icon"><i data-lucide="sparkles" style="color:#4285F4;"></i></div>
+      <h4>Gemini</h4>
+      <p>Motor de Inteligencia Artificial avanzado</p>
+    </div>
+    <div class="tech-card animate-up delay-3">
+      <div class="icon"><i data-lucide="atom" style="color:var(--teal);"></i></div>
+      <h4>React.js</h4>
+      <p>Interfaz moderna y reactiva</p>
+    </div>
+    <div class="tech-card animate-up delay-4">
+      <div class="icon"><i data-lucide="server" style="color:var(--purple);"></i></div>
+      <h4>Node.js</h4>
+      <p>Backend robusto y escalable</p>
+    </div>
+    <div class="tech-card animate-up delay-5">
+      <div class="icon"><i data-lucide="database" style="color:var(--red);"></i></div>
+      <h4>PostgreSQL</h4>
+      <p>Base de datos confiable</p>
+    </div>
+    <div class="tech-card animate-up delay-6">
+      <div class="icon"><i data-lucide="rocket" style="color:var(--teal);"></i></div>
+      <h4>Vite</h4>
+      <p>Compilación ultra-rápida</p>
+    </div>
+    <div class="tech-card animate-up delay-7">
+      <div class="icon"><i data-lucide="cloud" style="color:var(--purple);"></i></div>
+      <h4>Railway</h4>
+      <p>Hosting cloud profesional</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CRONOGRAMA ══════════ -->
+<section class="section-full section-red-soft" id="timeline">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="list-checks" style="width:14px;height:14px;"></i> <span class="text-gradient">Cronograma del proyecto</span></div>
+    <h2 class="section-title">Plan de desarrollo<br>por fases</h2>
+    <p class="section-subtitle">Entregas incrementales para que pueda usar el sistema desde las primeras semanas.</p>
+  </div>
+
+  <div class="timeline" style="max-width:700px; margin:0 auto;">
+    <div class="timeline-item animate-up">
+      <div class="timeline-dot">1</div>
+      <div class="timeline-content">
+        <h4>Fase 1 — Inicio y Estructura</h4>
+        <div class="duration">Semanas 1-2</div>
+        <p>Diseño visual, configuración del servidor y creación de la base de datos. Implementación del Planificador de Canchas.</p>
+      </div>
+    </div>
+    <div class="timeline-item animate-up delay-1">
+      <div class="timeline-dot">2</div>
+      <div class="timeline-content">
+        <h4>Fase 2 — Gestión Principal</h4>
+        <div class="duration">Semanas 3-4</div>
+        <p>Desarrollo del sistema de Venta de Manillas (Piscina), Directorio de Clientes y el Panel de Control con métricas del día.</p>
+      </div>
+    </div>
+    <div class="timeline-item animate-up delay-2">
+      <div class="timeline-dot">3</div>
+      <div class="timeline-content">
+        <h4>Fase 3 — Conexiones y WhatsApp</h4>
+        <div class="duration">Semanas 5-6</div>
+        <p>Integración con WhatsApp, Control del Restaurante y Gestión de Infraestructura. Activación de alertas automáticas.</p>
+      </div>
+    </div>
+    <div class="timeline-item animate-up delay-3">
+      <div class="timeline-dot">4</div>
+      <div class="timeline-content">
+        <h4>Fase 4 — Pruebas y Lanzamiento</h4>
+        <div class="duration">Semanas 7-8</div>
+        <p>Testing exhaustivo, optimización de rendimiento, capacitación del equipo y despliegue en producción. Soporte post-lanzamiento incluido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INVERSIÓN ══════════ -->
+<!--
+<section class="section-full section-orange-soft" id="inversion">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="gem" style="width:14px;height:14px;"></i> <span class="text-gradient">Inversión</span></div>
+    <h2 class="section-title">Su inversión en<br>transformación digital</h2>
+    <p class="section-subtitle">Una inversión estratégica diseñada para maximizar la rentabilidad, el control y la eficiencia de su club.</p>
+  </div>
+
+  <div class="pricing-card-v2 animate-up">
+    <div class="pricing-header-v2">
+      <div class="pricing-badge">Inversión Total</div>
+      <div class="main-price">$18.000.000 <small>COP</small></div>
+    </div>
+
+    <div class="pricing-body-v2">
+      <div class="pricing-features-v2">
+        <ul class="clean-list">
+          <li><i data-lucide="check"></i> 7 Módulos de gestión integrados</li>
+          <li><i data-lucide="check"></i> Inteligencia Artificial en WhatsApp</li>
+          <li><i data-lucide="check"></i> Dashboard Administrativo en tiempo real</li>
+          <li><i data-lucide="check"></i> Garantía y Soporte por 2 meses</li>
+        </ul>
+      </div>
+
+      <div class="pricing-divider"></div>
+
+      <div class="monthly-fee-v2">
+        <div class="monthly-label-v2">Sostenimiento Mensual</div>
+        <div class="monthly-price-v2">$250.000 <small>COP</small></div>
+        <p class="monthly-desc">Servidores, Base de Datos y API de WhatsApp</p>
+        <div class="monthly-logos-v2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" title="WhatsApp API" class="logo-whatsapp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" title="IA Asistida por GPT">
+          <img src="https://railway.app/brand/logo-dark.svg" alt="Railway" title="Infraestructura Railway">
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-timeline-v2">
+      <div class="timeline-step-v2">
+        <strong>50%</strong> <span>Inicial</span>
+      </div>
+      <div class="timeline-sep-v2"></div>
+      <div class="timeline-step-v2">
+        <strong>50%</strong> <span>Entrega</span>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ══════════ BENEFICIOS ══════════ -->
+<section class="section-full section-cream" id="beneficios">
+  <div class="section-header">
+    <div class="section-label"><i data-lucide="rocket" style="width:14px;height:14px;"></i> <span class="text-gradient">¿Por qué elegirnos?</span></div>
+    <h2 class="section-title">Beneficios de trabajar<br>con nosotros</h2>
+  </div>
+
+  <div class="benefits-grid">
+    <div class="benefit-card animate-up">
+      <div class="benefit-icon"><i data-lucide="target" style="color:var(--purple);"></i></div>
+      <h4>Software a la Medida</h4>
+      <p>Cada funcionalidad está diseñada específicamente para las necesidades de Encanto. No es un software genérico.</p>
+    </div>
+    <div class="benefit-card animate-up delay-1">
+      <div class="benefit-icon"><i data-lucide="zap" style="color:var(--orange);"></i></div>
+      <h4>Entregas Ágiles</h4>
+      <p>Entregas cada 2 semanas para que pueda ver el progreso y usar el sistema desde el primer mes.</p>
+    </div>
+    <div class="benefit-card animate-up delay-2">
+      <div class="benefit-icon"><i data-lucide="shield-check" style="color:var(--red);"></i></div>
+      <h4>Seguridad Total</h4>
+      <p>Datos encriptados, autenticación segura y backups automáticos para proteger su información.</p>
+    </div>
+    <div class="benefit-card animate-up delay-4">
+      <div class="benefit-icon"><i data-lucide="trending-up" style="color:var(--orange);"></i></div>
+      <h4>Escalable</h4>
+      <p>El sistema crece con su negocio. Añada nuevos módulos y funcionalidades cuando lo necesite.</p>
+    </div>
+    <div class="benefit-card animate-up delay-5">
+      <div class="benefit-icon"><i data-lucide="heart-handshake" style="color:var(--purple);"></i></div>
+      <h4>Soporte Dedicado</h4>
+      <p>2 meses de soporte técnico incluido post-lanzamiento. Estamos con usted en cada paso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="cta-section">
+  <h2 class="animate-up">¿Listo para transformar<br>la gestión de Encanto?</h2>
+  <p class="animate-up delay-1">Conversemos sobre cómo podemos hacer realidad esta visión.</p>
+  <a href="https://wa.me/573118886511?text=Hola,%20me%20interesa%20la%20propuesta%20del%20software%20Encanto" 
+     class="btn-whatsapp animate-up delay-2" target="_blank">
+    <i data-lucide="message-circle" style="width:20px;height:20px;"></i> Hablemos por WhatsApp
+  </a>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="color-bar"></div>
+<footer class="footer">
+  <p>© 2026 — Propuesta Confidencial para Club Encanto. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ══════════ SCROLL ANIMATIONS ══════════ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-up, .animate-in').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    if (el.closest('.hero')) {
+      el.style.animationPlayState = 'running';
+      return;
+    }
+    observer.observe(el);
+  });
+
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.style.background = 'linear-gradient(135deg, #f6e6c9, #faf0da, #fdf6ea)';
+      nav.style.boxShadow = '0 4px 24px rgba(149,46,138,0.1)';
+    } else {
+      nav.style.background = 'linear-gradient(135deg, #f6e6c9 0%, #faf0da 60%, #fdf6ea 100%)';
+      nav.style.boxShadow = '0 2px 24px rgba(149,46,138,0.08)';
+    }
+  });
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Initialize Lucide Icons
+  lucide.createIcons();
+});
+</script>
+
+</body>
+<!-- Build sync: 1bc8f6a6 -->
+</html>
