@@ -1,0 +1,56 @@
+services:
+  db:
+    image: postgres:17
+    container_name: encanto_db
+    restart: always
+    environment:
+      POSTGRES_USER: encanto_user
+      POSTGRES_PASSWORD: encanto_password
+      POSTGRES_DB: encanto_db
+    ports:
+      - "5435:5432"
+    volumes:
+      - encanto_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U encanto_user -d encanto_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: encanto_backend
+    restart: always
+    ports:
+      - "4001:4001"
+    environment:
+      - DATABASE_URL=postgresql://encanto_user:encanto_password@host.docker.internal:5432/encanto_db?schema=public
+      - PORT=4001
+      - JWT_SECRET=encanto_secret_key_2026
+      - NODE_ENV=development
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: encanto_frontend
+    restart: always
+    ports:
+      - "5180:5180"
+    environment:
+      - VITE_BACKEND_URL=http://localhost:4001
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  encanto_data:

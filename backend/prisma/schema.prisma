@@ -1,0 +1,148 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  password     String
+  name         String
+  role         String        @default("STAFF")
+  permissions  Json?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  manillaSales ManillaSale[]
+}
+
+model Customer {
+  id        String    @id @default(uuid())
+  name      String
+  phone     String?   @unique
+  email     String?   @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  bookings  Booking[]
+  sales     Sale[]
+}
+
+model Court {
+  id          String    @id @default(uuid())
+  name        String
+  type        String    @default("FUTBOL")
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  bookings    Booking[]
+}
+
+model Booking {
+  id         String    @id @default(uuid())
+  courtId    String
+  customerId String?
+  startTime  DateTime
+  endTime    DateTime
+  type       String    @default("RESERVATION")
+  status     String    @default("PENDING")
+  totalPrice Float
+  isPaid     Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  amountPaid Float     @default(0)
+  court      Court     @relation(fields: [courtId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+  receipts   PaymentReceipt[]
+}
+
+model PaymentReceipt {
+  id             String    @id @default(uuid())
+  bookingId      String
+  imageData      String    @db.Text // base64 data URI of the receipt image
+  amountDetected Float     // amount the AI read off the receipt image
+  paymentMethod  String?   // e.g. Nequi, Bancolombia, Daviplata
+  legible        Boolean   @default(true) // whether the AI could confidently read the image
+  status         String    @default("PENDING_REVIEW") // PENDING_REVIEW | VERIFIED | REJECTED
+  reviewedBy     String?
+  reviewedAt     DateTime?
+  createdAt      DateTime  @default(now())
+  booking        Booking   @relation(fields: [bookingId], references: [id])
+}
+
+model Sale {
+  id          String    @id @default(uuid())
+  customerId  String?
+  type        String
+  items       Json
+  totalAmount Float
+  status      String    @default("COMPLETED")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  customer    Customer? @relation(fields: [customerId], references: [id])
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id        String   @id @default(uuid())
+  name      String
+  category  String
+  price     Float
+  image     String?
+  available Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ManillaType {
+  id        String        @id @default(uuid())
+  name      String
+  price     Float
+  active    Boolean       @default(true)
+  color     String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  sales     ManillaSale[]
+}
+
+model ManillaSale {
+  id            String      @id @default(uuid())
+  reference     String      @unique
+  typeId        String
+  priceSold     Float
+  paymentMethod String      @default("CASH")
+  sellerId      String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  seller        User?       @relation(fields: [sellerId], references: [id])
+  type          ManillaType @relation(fields: [typeId], references: [id])
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  phone     String
+  name      String
+  text      String   @db.Text
+  fromMe    Boolean
+  type      String   @default("msg") // 'msg' or 'thought'
+  autoPilot Boolean  @default(true)
+  createdAt DateTime @default(now())
+  mediaUrl  String?  @db.Text // base64 data URI of an incoming image (e.g. payment receipt)
+  mediaType String?
+}
+
+model ChatState {
+  phone     String   @id
+  name      String
+  autoPilot Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+}
+

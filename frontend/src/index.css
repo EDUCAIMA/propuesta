@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-purple: #872B90;
+  --brand-accent: #F85127;
+  --brand-teal: #2BAB9A;
+  --brand-pending: #FAA422;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.scrolled-header {
+  backdrop-filter: blur(12px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f111;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.ai-thought-gradient {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(135, 43, 144, 0.05) 100%);
+}
+.whatsapp-tail-left::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid white;
+}
+.pulse-soft {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .7; }
+}
+
+.high-density-grid {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #kitchen-ticket,
+  #kitchen-ticket * {
+    visibility: visible;
+  }
+  #kitchen-ticket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
