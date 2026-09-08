@@ -10,7 +10,19 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: process.env.PORT ? parseInt(process.env.PORT) : 5180,
-    host: '0.0.0.0',   // necesario para exponer dentro de Docker
+    host: '0.0.0.0',
+    allowedHosts: true,
+    proxy: {
+      '/api': {
+        target: backendTarget,
+        changeOrigin: true,
+      }
+    }
+  },
+  preview: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 5180,
+    host: '0.0.0.0',
+    allowedHosts: true,
     proxy: {
       '/api': {
         target: backendTarget,
